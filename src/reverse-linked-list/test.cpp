@@ -9,14 +9,16 @@ TEST_CASE(__FILE__){
     SECTION("example1"){
         auto* src = leetcode::make(10);
         auto* copy = leetcode::copy(src);
-        s->reverseList(src);
+        auto* rev_src = s->reverseList(src);
         
-        auto arr_src = leetcode::to_array(src);
+        auto arr_src = leetcode::to_array(rev_src);
         auto arr_copy = leetcode::to_array(copy);
+
+        std::reverse(arr_copy.begin(), arr_copy.end());
 
         REQUIRE(arr_src == arr_copy);
 
-        leetcode::destroy(src);
+        leetcode::destroy(rev_src);
         leetcode::destroy(copy);
     }
 }
