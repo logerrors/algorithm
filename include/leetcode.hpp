@@ -78,7 +78,7 @@ namespace leetcode {
         return head;
     }
 
-    void destory(ListNode* node){
+    void destroy(ListNode* node){
         while(node){
             ListNode* next = node->next;
             delete node;

@@ -16,7 +16,7 @@ static void reverse_linked_list(benchmark::State& state){
         s->reverseList(data);
 
         state.PauseTiming();
-        leetcode::destory(data);
+        leetcode::destroy(data);
     }
 }
 

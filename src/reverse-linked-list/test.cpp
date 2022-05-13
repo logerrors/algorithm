@@ -16,7 +16,7 @@ TEST_CASE(__FILE__){
 
         REQUIRE(arr_src == arr_copy);
 
-        leetcode::destory(src);
-        leetcode::destory(copy);
+        leetcode::destroy(src);
+        leetcode::destroy(copy);
     }
 }
