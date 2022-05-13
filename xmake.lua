@@ -4,14 +4,31 @@ set_project("algorithm")
 set_languages("c++17")
 set_optimize("debug")
 
+
+add_includedirs("include")
+
 add_requires("catch2", "benchmark", "fmt")
 
-target("test-kth-largest-element-in-an-array")
-    set_kind("binary")
-    add_packages("catch2")
-    add_files('src/kth-largest-element-in-an-array/test.cpp')
+function define_test_target(name) 
+    local target_name = "test-" .. name
+    target(target_name)
+        set_kind("binary")
+        add_packages("catch2")
+        add_files('src/'..name..'/test.cpp')
+end
 
-target("bench-kth-largest-element-in-an-array")
-    set_kind("binary")
-    add_packages("benchmark")
-    add_files('src/kth-largest-element-in-an-array/bench.cpp')
+function define_bench_target(name) 
+    local target_name = "bench-" .. name
+    target(target_name)
+        set_kind("binary")
+        add_packages("benchmark")
+        add_files('src/'..name..'/bench.cpp')
+end
+
+function define_target(name) 
+    define_test_target(name)
+    define_bench_target(name)
+end
+
+define_target("kth-largest-element-in-an-array")
+define_target("reverse-linked-list")
