@@ -220,4 +220,29 @@ namespace leetcode
         destroy(node->right);
         delete node;
     }
+
+    template<typename T>
+    T* find(T* node, int val);
+
+    template<>
+    TreeNode* find(TreeNode* node, int val){
+        if(node == nullptr)return nullptr;
+        if(node->val == val)return node;
+        auto* left = find(node->left, val);
+        if(left != nullptr)return left;
+        auto* right = find(node->right, val);
+        if(right != nullptr)return right;
+        return nullptr;
+    }
+
+    template<>
+    ListNode* find(ListNode* node, int val){
+        if(node == nullptr)return nullptr;
+        ListNode* cur = node;
+        while(cur){
+            if(cur->val == val)return cur;
+            cur = cur->next;
+        }
+        return nullptr;
+    }
 }
