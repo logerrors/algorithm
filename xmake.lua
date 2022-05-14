@@ -7,7 +7,7 @@ set_optimize("debug")
 
 add_includedirs("include")
 
-add_requires("catch2", "benchmark", "fmt")
+add_requires("catch2", "benchmark")
 
 function define_test_target(name) 
     local target_name = "test-" .. name
@@ -32,6 +32,7 @@ end
 
 define_target("kth-largest-element-in-an-array")
 define_target("reverse-linked-list")
+define_target("binary-tree-maximum-path-sum")
 
 task("problem")
 

@@ -7,7 +7,7 @@ TEST_CASE(__FILE__){
     auto s = std::make_shared<Solution>();
 
     SECTION("example1"){
-        auto* src = leetcode::make(10);
+        auto* src = leetcode::from_random(10);
         auto* copy = leetcode::copy(src);
         auto* rev_src = s->reverseList(src);
         

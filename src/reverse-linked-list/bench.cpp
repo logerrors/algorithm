@@ -10,7 +10,7 @@ static void reverse_linked_list(benchmark::State& state){
 
     for(auto _:state){
         state.PauseTiming();
-        auto* data = leetcode::make(1000);
+        auto* data = leetcode::from_random(1000);
         state.ResumeTiming();
 
         s->reverseList(data);
