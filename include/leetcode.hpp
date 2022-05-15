@@ -245,4 +245,24 @@ namespace leetcode
         }
         return nullptr;
     }
+
+    template<typename T>
+    bool equal(T* node1, T* node2);
+
+    template<>
+    bool equal(ListNode* node1, ListNode* node2){
+        return true;
+    }
+
+    template<>
+    bool equal(TreeNode* node1, TreeNode* node2){
+        if(node1 == nullptr && node2 == nullptr)return true;
+        if(node1 == nullptr || node2 == nullptr)return false;
+
+        if(node1->val == node2->val){
+            return equal(node1->left, node2->left) && equal(node1->right, node2->right);
+        }
+        return false;
+    }
+
 }
