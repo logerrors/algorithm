@@ -36,6 +36,7 @@ define_target("binary-tree-maximum-path-sum")
 define_target("lowest-common-ancestor-of-a-binary-tree")
 define_target("delete-node-in-a-bst")
 define_target("lru-cache")
+define_target("maximum-subarray")
 
 task("problem")
 
