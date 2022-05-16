@@ -167,6 +167,14 @@ namespace leetcode
         return head;
     }
 
+    TreeNode* copy(TreeNode* src){ 
+        if(src == nullptr)return nullptr;
+        TreeNode* head = new TreeNode(src->val);
+        head->left = copy(src->left);
+        head->right = copy(src->right);
+        return head;
+    }
+
     std::vector<int> to_array(ListNode *node)
     {
         std::vector<int> data;
@@ -251,7 +259,13 @@ namespace leetcode
 
     template<>
     bool equal(ListNode* node1, ListNode* node2){
-        return true;
+        if(node1 == node2)return true;
+        while(node1 != nullptr && node2 != nullptr){
+            if(node1->val != node2->val)return false;
+            node1 = node1->next;
+            node2 = node2->next;
+        }
+        return node1 == nullptr && node2 == nullptr;
     }
 
     template<>

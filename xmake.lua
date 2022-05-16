@@ -37,6 +37,7 @@ define_target("lowest-common-ancestor-of-a-binary-tree")
 define_target("delete-node-in-a-bst")
 define_target("lru-cache")
 define_target("maximum-subarray")
+define_target("leetcode")
 
 task("problem")
 
