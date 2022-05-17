@@ -4,7 +4,6 @@ set_project("algorithm")
 set_languages("c++17")
 set_optimize("debug")
 
-
 add_includedirs("include")
 
 add_requires("catch2", "benchmark")
@@ -38,6 +37,9 @@ define_target("delete-node-in-a-bst")
 define_target("lru-cache")
 define_target("maximum-subarray")
 define_target("leetcode")
+define_target("longest-substring-without-repeating-characters")
+
+
 
 task("problem")
 

@@ -9,6 +9,7 @@
 #include <string>
 #include <deque>
 #include <optional>
+#include <unordered_map>
 
 namespace leetcode
 {
