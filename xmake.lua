@@ -38,7 +38,7 @@ define_target("lru-cache")
 define_target("maximum-subarray")
 define_target("leetcode")
 define_target("longest-substring-without-repeating-characters")
-
+define_target("course-schedule")
 
 
 task("problem")
