@@ -41,6 +41,7 @@ define_target("longest-substring-without-repeating-characters")
 define_target("course-schedule")
 define_target("serialize-and-deserialize-binary-tree")
 define_target("merge-intervals")
+define_target("binary-search")
 
 
 task("problem")
