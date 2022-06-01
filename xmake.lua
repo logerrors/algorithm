@@ -42,6 +42,7 @@ define_target("course-schedule")
 define_target("serialize-and-deserialize-binary-tree")
 define_target("merge-intervals")
 define_target("binary-search")
+define_target("guess-number-higher-or-lower")
 
 
 task("problem")
