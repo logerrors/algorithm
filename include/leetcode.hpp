@@ -10,6 +10,7 @@
 #include <deque>
 #include <optional>
 #include <unordered_map>
+#include <queue>
 
 namespace leetcode
 {
@@ -121,6 +122,43 @@ namespace leetcode
         return head;
     }
     
+    template<typename T>
+    std::string to_string(T* node){}
+
+    template<>
+    std::string to_string(TreeNode* node){
+        if(node == nullptr)return "[]";
+
+        std::queue<TreeNode*> q;
+        q.push(node);
+
+        std::string str("[");
+        while(!q.empty()){
+            int size = q.size();
+
+                auto node = q.front();
+                q.pop();
+                if(node == nullptr){
+                    str += "null,";
+                }else{
+                    str += std::to_string(node->val) + ",";
+                    q.push(node->left);
+                    q.push(node->right);
+                }
+        }
+
+        str.erase(str.size() - 1, 1);
+        str.push_back(']');
+        return str;
+    }
+
+    template<>
+    std::string to_string(ListNode* node){
+
+    }
+
+
+
     ListNode *from_random(int size, int range = 10000)
     {
         ListNode *head = nullptr;

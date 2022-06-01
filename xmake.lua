@@ -39,6 +39,8 @@ define_target("maximum-subarray")
 define_target("leetcode")
 define_target("longest-substring-without-repeating-characters")
 define_target("course-schedule")
+define_target("serialize-and-deserialize-binary-tree")
+define_target("merge-intervals")
 
 
 task("problem")

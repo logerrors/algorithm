@@ -3,7 +3,6 @@
 
 static void BM_deleteNode(benchmark::State &state)
 {
-
     for (auto _ : state)
     {
         state.PauseTiming();
