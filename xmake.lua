@@ -44,6 +44,7 @@ define_target("merge-intervals")
 define_target("binary-search")
 define_target("guess-number-higher-or-lower")
 define_target("sqrtx")
+define_target("search-insert-position")
 
 
 task("problem")
