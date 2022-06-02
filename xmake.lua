@@ -45,6 +45,7 @@ define_target("binary-search")
 define_target("guess-number-higher-or-lower")
 define_target("sqrtx")
 define_target("search-insert-position")
+define_target("peak-index-in-a-mountain-array")
 
 
 task("problem")
