@@ -46,6 +46,7 @@ define_target("guess-number-higher-or-lower")
 define_target("sqrtx")
 define_target("search-insert-position")
 define_target("peak-index-in-a-mountain-array")
+define_target("find-the-distance-value-between-two-arrays")
 
 
 task("problem")
