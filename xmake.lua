@@ -29,6 +29,7 @@ function define_target(name)
     define_bench_target(name)
 end
 
+define_target("sliding-window-maximum")
 define_target("kth-largest-element-in-an-array")
 define_target("reverse-linked-list")
 define_target("binary-tree-maximum-path-sum")
